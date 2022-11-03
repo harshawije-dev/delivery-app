@@ -12,7 +12,7 @@ const FeatureRow = ({ id, title, description }) => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas tristique tellus",
       PreviewImage:
         "https://api.lorem.space/image/drink?w=150&h=150&hash=225E6693",
-      Price: 25.5,
+      Price: 25,
     },
     {
       Id: 2,

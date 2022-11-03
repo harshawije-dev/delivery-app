@@ -9,13 +9,13 @@ import {
   selectBucketItemsOnId,
 } from "../features/bucketSlice";
 
-const Dishes = ({ id, name, description, dishPreview }) => {
+const Dishes = ({ id, name, description, dishPreview, price }) => {
   const [itemCount, setItemCount] = useState(false);
   const dispatch = useDispatch();
   const items = useSelector((state) => selectBucketItemsOnId(state, id));
 
   const addToBucket = () => {
-    dispatch(appendCart({ id, name, description, dishPreview }));
+    dispatch(appendCart({ id, name, description, dishPreview, price }));
   };
 
   const removeFromBucket = () => {
@@ -25,7 +25,7 @@ const Dishes = ({ id, name, description, dishPreview }) => {
     dispatch(popCart({ id }));
   };
 
-  console.log(items);
+  //console.log(items);
 
   return (
     <>

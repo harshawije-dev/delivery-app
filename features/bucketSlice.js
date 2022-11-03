@@ -30,6 +30,12 @@ export const bucketSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { appendCart, popCart } = bucketSlice.actions;
 export const selectBucketItems = (state) => state.bucket.items;
+// get by Id
 export const selectBucketItemsOnId = (state, id) =>
   state.bucket.items.filter((item) => item.id === id);
+// total amount
+export const selectBucketSubTotal = (state) =>
+  //TODO:: why reduce is not working
+  state.bucket.items.map((item) => item.price);
+
 export default bucketSlice.reducer;
