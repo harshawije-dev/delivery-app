@@ -11,10 +11,13 @@ const FloatingBasket = () => {
   const items = useSelector(selectBucketItems);
   const navigation = useNavigation();
   const subTotal = useSelector(selectBucketSubTotal);
-  
+
   return (
     <View className="absolute bottom-10 w-full z-50">
-      <TouchableOpacity className="mx-5 bg-[#2dd4bf] p-4 rounded-lg">
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Checkout")}
+        className="mx-5 bg-[#2dd4bf] p-4 rounded-lg"
+      >
         <View className="flex-row space-x-2 items-center">
           <Text className="font-extrabold text-lg bg-[#0d9488] text-white py-1 px-2">
             {items.length}
