@@ -36,6 +36,7 @@ export const selectBucketItemsOnId = (state, id) =>
 // total amount
 export const selectBucketSubTotal = (state) =>
   //TODO:: why reduce is not working
-  state.bucket.items.map((item) => item.price);
+  //state.bucket.items.map((item) => );
+  state.bucket.items.reduce((total, item) => total + Math.round(item.price), 0);
 
 export default bucketSlice.reducer;

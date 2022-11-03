@@ -25,7 +25,12 @@ const Restaurant = () => {
   return (
     <>
       <FloatingBasket />
-      <ScrollView>
+      <ScrollView
+        className="bg-white"
+        contentContainerStyle={{
+          paddingBottom: 118,
+        }}
+      >
         <View className="relative">
           <Image
             source={{

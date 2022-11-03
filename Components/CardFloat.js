@@ -11,10 +11,7 @@ const FloatingBasket = () => {
   const items = useSelector(selectBucketItems);
   const navigation = useNavigation();
   const subTotal = useSelector(selectBucketSubTotal);
-
-  console.log(items);
-  console.log(subTotal);
-
+  
   return (
     <View className="absolute bottom-10 w-full z-50">
       <TouchableOpacity className="mx-5 bg-[#2dd4bf] p-4 rounded-lg">
