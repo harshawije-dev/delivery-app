@@ -6,7 +6,7 @@ const FeatureRow = ({ id, title, description }) => {
   // Dishes List
   const dishList = [
     {
-      Id: 1,
+      Id: "D555C275-0FE3-45BA-A8EE-1F68DD16B7FB",
       Name: "Purple Dragon",
       Description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas tristique tellus",
@@ -15,7 +15,7 @@ const FeatureRow = ({ id, title, description }) => {
       Price: 25,
     },
     {
-      Id: 2,
+      Id: "6B5356FD-04D8-47D3-B061-24A385BEE7A0",
       Name: "Vodka Sun",
       Description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas tristique tellus",
@@ -24,7 +24,7 @@ const FeatureRow = ({ id, title, description }) => {
       Price: 30,
     },
     {
-      Id: 3,
+      Id: "19C58033-A097-4773-804C-4C020581B822",
       Name: "Red Strawnerry Rum",
       Description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas tristique tellus",
@@ -33,7 +33,7 @@ const FeatureRow = ({ id, title, description }) => {
       Price: 35.5,
     },
     {
-      Id: 4,
+      Id: "B8600DD2-ECEA-47BC-9F02-DF17EDCA655E",
       Name: "New Halloween Jungle Juice",
       Description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas tristique tellus",
