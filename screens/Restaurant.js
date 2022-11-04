@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import {
@@ -9,18 +9,26 @@ import {
 import { MapPinIcon, StarIcon } from "react-native-heroicons/solid";
 import Dishes from "../Components/DishRow";
 import FloatingBasket from "../Components/CardFloat";
+import { useDispatch } from "react-redux";
+import { setResturant } from "../features/resturantSlice";
 
 const Restaurant = () => {
   const {
     params: { title, location, rating, preview, dishes, lat, long },
   } = useRoute();
   const navigation = useNavigation();
+  const dispatch = useDispatch();
 
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: false,
     });
   }, []);
+
+  useEffect(() => {
+    dispatch(setResturant(title, location, rating, preview, dishes, lat, long));
+  }, []);
+
 
   return (
     <>
