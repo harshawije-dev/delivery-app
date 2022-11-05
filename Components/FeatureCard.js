@@ -19,6 +19,7 @@ const FeatureCard = ({
     <TouchableOpacity
       onPress={() => {
         navigation.navigate("Restaurant", {
+          id,
           title,
           location,
           rating,

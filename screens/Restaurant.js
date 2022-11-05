@@ -14,7 +14,7 @@ import { setResturant } from "../features/resturantSlice";
 
 const Restaurant = () => {
   const {
-    params: { title, location, rating, preview, dishes, lat, long },
+    params: { id, title, location, rating, preview, dishes, lat, long },
   } = useRoute();
   const navigation = useNavigation();
   const dispatch = useDispatch();
@@ -26,9 +26,10 @@ const Restaurant = () => {
   }, []);
 
   useEffect(() => {
-    dispatch(setResturant(title, location, rating, preview, dishes, lat, long));
+    dispatch(
+      setResturant(id, preview, title, location, rating, dishes, lat, long)
+    );
   }, []);
-
 
   return (
     <>

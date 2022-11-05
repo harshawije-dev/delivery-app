@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const state = {
   resturant: {
-    id: null,
     preview: null,
     title: null,
     location: null,
@@ -25,5 +24,5 @@ export const resturantSlice = createSlice({
 
 // Action creators are generated for each case reducer function
 export const { setResturant } = resturantSlice.actions;
-export const selectResturantItems = (state) => state.resturant.resturant;
+export const selectResturantItems = (state) => state;
 export default resturantSlice.reducer;
