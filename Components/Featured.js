@@ -60,8 +60,8 @@ const FeatureRow = ({ id, title, description }) => {
       >
         <FeatureCard
           id={5001}
-          preview="https://api.lorem.space/image/drink?w=256&h=144&hash=9D9539E7"
-          title="Nando"
+          preview={"https://api.lorem.space/image/drink?w=256&h=144&hash=9D9539E7"}
+          title={"Nando"}
           location={"Colombo 07"}
           rating={4.5}
           dishes={dishList}
