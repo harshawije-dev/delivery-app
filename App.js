@@ -4,6 +4,7 @@ import { TransitionPresets } from "@react-navigation/stack";
 import { Provider } from "react-redux";
 import Checkout from "./screens/Checkout";
 import Home from "./screens/Home";
+import OrderLoading from "./screens/OrderLoading";
 import Restaurant from "./screens/Restaurant";
 import store from "./store";
 
@@ -22,6 +23,15 @@ export default function App() {
             options={{
               title: "Checkout",
               ...TransitionPresets.RevealFromBottomAndroid,
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="OrderLoading"
+            component={OrderLoading}
+            options={{
+              title: "OrderLoading",
+              presentation: "fullScreenModal",
               headerShown: false,
             }}
           />
