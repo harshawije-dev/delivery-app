@@ -98,7 +98,10 @@ const Checkout = () => {
             <Text className="font-extrabold text-base">{subTotal + 200}</Text>
           </View>
 
-          <TouchableOpacity className="bg-[#00CCBB] rounded-lg p-4">
+          <TouchableOpacity
+            onPress={() => navigation.navigate("OrderLoading")}
+            className="bg-[#00CCBB] rounded-lg p-4"
+          >
             <Text className="text-center font-bold text-white text-lg">
               Place Order
             </Text>
