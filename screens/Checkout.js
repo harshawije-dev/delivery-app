@@ -84,11 +84,25 @@ const Checkout = () => {
             );
           })}
         </ScrollView>
-        <View>
-          <View>
-            <Text>Subtotal</Text>
-            <Text>{subTotal}</Text>
+        <View className="bg-white p-5 mt-4 space-y-4">
+          <View className="flex-row justify-between">
+            <Text className="text-gray-400">Total</Text>
+            <Text className="text-gray-400">{subTotal}</Text>
           </View>
+          <View className="flex-row justify-between">
+            <Text className="text-gray-400">Delivery Fee</Text>
+            <Text className="text-gray-400">{200}</Text>
+          </View>
+          <View className="flex-row justify-between">
+            <Text className="">Subtotal</Text>
+            <Text className="font-extrabold text-base">{subTotal + 200}</Text>
+          </View>
+
+          <TouchableOpacity className="bg-[#00CCBB] rounded-lg p-4">
+            <Text className="text-center font-bold text-white text-lg">
+              Place Order
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
